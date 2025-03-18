@@ -1,0 +1,35 @@
+[gd_scene load_steps=2 format=3 uid="uid://djx7c4602r3ac"]
+
+[ext_resource type="Script" path="res://label_score.gd" id="1_frlcv"]
+
+[node name="hud" type="Node2D"]
+
+[node name="label score" type="Label" parent="."]
+offset_right = 616.0
+offset_bottom = 212.0
+text = "SCORE:
+"
+uppercase = true
+script = ExtResource("1_frlcv")
+
+[node name="label timeout" type="Label" parent="."]
+offset_left = 249.0
+offset_top = 2.0
+offset_right = 329.0
+offset_bottom = 25.0
+text = "TIMEOUT :"
+
+[node name="infoscore" type="Label" parent="."]
+offset_left = 60.0
+offset_top = -27.0
+offset_right = 100.0
+offset_bottom = 22.0
+text = "
+000"
+
+[node name="infotimeou" type="Label" parent="."]
+offset_left = 333.0
+offset_top = 3.0
+offset_right = 413.0
+offset_bottom = 26.0
+text = "000"

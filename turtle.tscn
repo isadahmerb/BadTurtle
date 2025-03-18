@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=3 uid="uid://d2oyo86uo2r5i"]
+
+[ext_resource type="Script" path="res://turtle.gd" id="1_k54gh"]
+[ext_resource type="Texture2D" uid="uid://c8ydw53h4vm0d" path="res://labirinto_assets/labirinto_assets/turtle_00.png" id="1_rplwu"]
+[ext_resource type="Texture2D" uid="uid://b8wt72svcj47r" path="res://labirinto_assets/labirinto_assets/turtle_01.png" id="2_gry8w"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_p77h0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_rplwu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_gry8w")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wh8o2"]
+radius = 19.0
+
+[node name="turtle" type="CharacterBody2D"]
+script = ExtResource("1_k54gh")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_p77h0")
+frame_progress = 0.338558
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -1)
+shape = SubResource("CircleShape2D_wh8o2")
